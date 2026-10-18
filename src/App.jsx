@@ -1,11 +1,7 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./components/layout/MainLayout";
-
 import Dashboard from "./pages/Dashboard";
 import PurchaseOrders from "./pages/PurchaseOrders";
 import PODetail from "./pages/PODetail";
@@ -22,65 +18,16 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-
-          {/* DASHBOARD */}
-          <Route
-            path="/"
-            element={<Dashboard />}
-          />
-
-          {/* PURCHASE ORDERS */}
-          <Route
-            path="/purchase-orders"
-            element={<PurchaseOrders />}
-          />
-
-          <Route
-            path="/purchase-orders/new"
-            element={<InputPO />}
-          />
-
-          <Route
-            path="/purchase-orders/:id"
-            element={<PODetail />}
-          />
-
-          {/* PRODUCTION */}
-          <Route
-            path="/production"
-            element={<Production />}
-          />
-
-          {/* QUALITY CONTROL */}
-          <Route
-            path="/qc"
-            element={<QC />}
-          />
-
-          {/* DELIVERY */}
-          <Route
-            path="/delivery"
-            element={<Delivery />}
-          />
-
-          {/* CUSTOMERS */}
-          <Route
-            path="/customers"
-            element={<Customers />}
-          />
-
-          {/* REPORTS */}
-          <Route
-            path="/reports"
-            element={<Reports />}
-          />
-
-          {/* SETTINGS */}
-          <Route
-            path="/settings"
-            element={<Settings />}
-          />
-
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/purchase-orders" element={<PurchaseOrders />} />
+          <Route path="/purchase-orders/new" element={<InputPO />} />
+          <Route path="/purchase-orders/:id" element={<PODetail />} />
+          <Route path="/production" element={<Production />} />
+          <Route path="/qc" element={<QC />} />
+          <Route path="/delivery" element={<Delivery />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>
